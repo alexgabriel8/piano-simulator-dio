@@ -101,7 +101,7 @@ input:checked::before {
     width: 44px;
     height: 140px;
     z-index: 2;
-    margin: 0 22px 0 -22px;
+    margin: 0 -22px;
     border: 1px solid #000;
     border-radius: 0 0 5px 5px;
     background-image: linear-gradient(#333, #000);
