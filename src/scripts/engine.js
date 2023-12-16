@@ -1,9 +1,11 @@
 const pianoKeys = document.querySelectorAll(".piano-keys .key");
+const volumeSlider = document.querySelector(".volume-slider")
 
+let audio = new Audio(`src/tunes/a.wav`)
 let mappedKeys = [];
 
 const playTune = (key) => {
-    const audio = new Audio(`src/tunes/${key}.wav`)
+    audio.src = `src/tunes/${key}.wav`
     audio.play()
 }
 
@@ -17,9 +19,16 @@ document.addEventListener("keydown", (e) => {
         playTune(e.key)
         const clickedKey = document.querySelector(`[data-key="${e.key}"]`);
         clickedKey.classList.add("active")
-        setTimeout(() => {
-            clickedKey.classList.remove("active")
-        }, 150);
-    }
 
+        document.addEventListener("keyup", () => {
+            clickedKey.classList.remove("active")
+        })
+    }
 })
+
+const handleVolume = (e) => {
+    console.log(e.target.value)
+    audio.volume = e.target.value;
+}
+
+volumeSlider.addEventListener("input", handleVolume)
