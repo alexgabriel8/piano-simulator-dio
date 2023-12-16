@@ -92,7 +92,7 @@ input:checked::before {
     background-image: linear-gradient(#FFF 96%, #eee 4%);
 }
 
-.piano-keys .key.white:active {
+.piano-keys .key.white.active {
     box-shadow: inset -5px 5px 20px rgba(0,0,0, 0.2);
     background: linear-gradient(to bottom, #FFF 0%, #eee 100%);
 }
