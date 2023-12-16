@@ -118,4 +118,10 @@ input:checked::before {
     width: 100%;
     text-align: center;
     font-size: 1.13rem;
+    
+    transition: opacity 0.3s;
+}
+
+.piano-keys .key.hide span {
+    opacity: 0;
 }
