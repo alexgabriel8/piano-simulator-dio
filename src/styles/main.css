@@ -9,9 +9,12 @@ body {
 
 .container {
     width: 780px;
-    border-radius: 20px;
     padding: 35px 40px;
     background-color: #000;
+    
+    border: solid #3d3d3d;
+    border-width: 0 10px 10px 0;
+    border-radius: 20px;
 }
 
 .container header {
