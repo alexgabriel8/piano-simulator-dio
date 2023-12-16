@@ -12,4 +12,10 @@ pianoKeys.forEach(key => {
 
 document.addEventListener("keydown", (e) => {
     playTune(e.key)
+
+    const clickedKey = document.querySelector(`[data-key="${e.key}"]`);
+    clickedKey.classList.add("active")
+    setTimeout(() => {
+        clickedKey.classList.remove("active")
+    }, 150);
 })
